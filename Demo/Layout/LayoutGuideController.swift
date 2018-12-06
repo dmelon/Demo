@@ -27,6 +27,13 @@ class LayoutGuideController: ViewController {
             make.right.equalToSuperview().offset(-margin)
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        log("top layout guide: \(topLayoutGuide)")
+        log("bottom layout guide: \(bottomLayoutGuide)")
+    }
 }
 
 class LayoutGuideWithTabBarController: LayoutGuideController { }

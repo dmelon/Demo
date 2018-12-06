@@ -21,6 +21,9 @@
 		2B454BF421B8DC1B009CD302 /* LayoutGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF321B8DC1B009CD302 /* LayoutGuideController.swift */; };
 		2B454BF721B8DDB0009CD302 /* SettingsOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF621B8DDB0009CD302 /* SettingsOptionsController.swift */; };
 		2B454BF921B8DEF8009CD302 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF821B8DEF8009CD302 /* SettingsStore.swift */; };
+		2B454BFD21B8E8CE009CD302 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFC21B8E8CE009CD302 /* Log.swift */; };
+		2B454C0021B8F768009CD302 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFF21B8F768009CD302 /* Sequence.swift */; };
+		2B454C0221B8F76F009CD302 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454C0121B8F76F009CD302 /* String.swift */; };
 		CC3C2FF2037A73BF38BA3BF3 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58545DD6CA5D8E26B5CF25BF /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		2B454BF321B8DC1B009CD302 /* LayoutGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuideController.swift; sourceTree = "<group>"; };
 		2B454BF621B8DDB0009CD302 /* SettingsOptionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsController.swift; sourceTree = "<group>"; };
 		2B454BF821B8DEF8009CD302 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		2B454BFC21B8E8CE009CD302 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		2B454BFF21B8F768009CD302 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		2B454C0121B8F76F009CD302 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		58545DD6CA5D8E26B5CF25BF /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9702D1F660D03EFB8111FAFC /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,11 +124,13 @@
 		2B454BB521B8CDC1009CD302 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				2B454BFE21B8F758009CD302 /* Utils */,
 				2B454BB621B8CDC1009CD302 /* AppDelegate.swift */,
 				2B454BB821B8CDC1009CD302 /* RootController.swift */,
 				2B454BED21B8D42D009CD302 /* ViewController.swift */,
 				2B454BE421B8D104009CD302 /* NavigationController.swift */,
 				2B454BEB21B8D277009CD302 /* OptionsController.swift */,
+				2B454BFC21B8E8CE009CD302 /* Log.swift */,
 				2B454BE621B8D139009CD302 /* Layout */,
 				2B454BF521B8DD78009CD302 /* Settings */,
 				2B454BBD21B8CDC3009CD302 /* Assets.xcassets */,
@@ -167,6 +175,15 @@
 				2B454BF821B8DEF8009CD302 /* SettingsStore.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		2B454BFE21B8F758009CD302 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B454BFF21B8F768009CD302 /* Sequence.swift */,
+				2B454C0121B8F76F009CD302 /* String.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F2D1E3D1A0CF8A10B4AFD9D7 /* Pods */ = {
@@ -363,7 +380,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B454BEE21B8D42D009CD302 /* ViewController.swift in Sources */,
+				2B454C0221B8F76F009CD302 /* String.swift in Sources */,
 				2B454BEA21B8D1D2009CD302 /* SafeAreaController.swift in Sources */,
+				2B454C0021B8F768009CD302 /* Sequence.swift in Sources */,
+				2B454BFD21B8E8CE009CD302 /* Log.swift in Sources */,
 				2B454BF021B8D501009CD302 /* LayoutOptionsController.swift in Sources */,
 				2B454BB921B8CDC1009CD302 /* RootController.swift in Sources */,
 				2B454BE521B8D104009CD302 /* NavigationController.swift in Sources */,

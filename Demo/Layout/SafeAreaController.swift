@@ -31,6 +31,18 @@ class SafeAreaController: ViewController {
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if #available(iOS 11.0, *) {
+            log("status bar height: \(UIApplication.shared.statusBarFrame.height)")
+            log("navigation bar height: \(navigationController!.navigationBar.bounds.height)")
+            log("tab bar height: \(tabBarController!.tabBar.bounds.height)")
+            log("safe area layout guide: \(view.safeAreaLayoutGuide)")
+        } else {
+            // Fallback on earlier versions
+        }
+    }
 }
 
 class SafeAreaWithTabBarController: SafeAreaController { }

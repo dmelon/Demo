@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     let bag = DisposeBag()
     
     class var navigationTitle: String {
-        return NSStringFromClass(self)
+        var txt = NSStringFromClass(self)
+        txt = txt.components(separatedBy: ".").last!
+        txt = txt.components(separatedBy: "Controller").first!
+        return txt.splitedCamelString
     }
     
     override func viewDidLoad() {
@@ -30,3 +33,5 @@ class ViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+
