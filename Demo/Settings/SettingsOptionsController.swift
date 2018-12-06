@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+// 负责一些全局变量的设置
 class SettingsOptionsController: OptionsController {
     
     override init() {
@@ -40,7 +41,7 @@ class SettingsOptionsController: OptionsController {
     // 
     private func tabBarIsTranslucentItem() -> Item {
         let relay = SettingsStore.tabBarIsTranslucentRelay
-        return Item(option: "\(relay.value.description)") {
+        return Item(option: "tab bar is translucent: " + "\(relay.value.description)") {
             relay.accept(!relay.value)
         }
     }

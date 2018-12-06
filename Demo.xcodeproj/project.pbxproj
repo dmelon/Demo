@@ -124,7 +124,6 @@
 		2B454BB521B8CDC1009CD302 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				2B454BFE21B8F758009CD302 /* Utils */,
 				2B454BB621B8CDC1009CD302 /* AppDelegate.swift */,
 				2B454BB821B8CDC1009CD302 /* RootController.swift */,
 				2B454BED21B8D42D009CD302 /* ViewController.swift */,
@@ -133,6 +132,7 @@
 				2B454BFC21B8E8CE009CD302 /* Log.swift */,
 				2B454BE621B8D139009CD302 /* Layout */,
 				2B454BF521B8DD78009CD302 /* Settings */,
+				2B454BFE21B8F758009CD302 /* Utils */,
 				2B454BBD21B8CDC3009CD302 /* Assets.xcassets */,
 				2B454BBF21B8CDC3009CD302 /* LaunchScreen.storyboard */,
 				2B454BC221B8CDC3009CD302 /* Info.plist */,
