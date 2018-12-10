@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--InterfaceControllerB1-->
+        <scene sceneID="H45-sN-puR">
+            <objects>
+                <controller identifier="InterfaceControllerB1" id="J7V-s0-dbb" customClass="InterfaceControllerB1" customModule="DemoWatch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="B1" id="5Np-vx-Akb">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="yUl-PZ-axe" kind="relationship" relationship="nextPage" id="a1o-OI-luD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="225" y="-233"/>
+        </scene>
+        <!--InterfaceControllerB2-->
+        <scene sceneID="X4c-pA-OUH">
+            <objects>
+                <controller identifier="InterfaceControllerB2" id="yUl-PZ-axe" customClass="InterfaceControllerB2" customModule="DemoWatch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="B2" id="nIu-bO-WVd">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="To C" id="NnI-Xt-FFv">
+                            <connections>
+                                <action selector="toCPage" destination="yUl-PZ-axe" id="Vs0-hY-z63"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="toCButton" destination="NnI-Xt-FFv" id="Rbd-qx-clj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="530" y="-233"/>
+        </scene>
+        <!--InterfaceControllerA-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="InterfaceControllerA" id="AgC-eL-Hgc" customClass="InterfaceControllerA" customModule="DemoWatch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="A" id="j5S-IQ-bdy">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="To B1" id="XXT-ZY-CNj">
+                            <connections>
+                                <action selector="toB1Page" destination="AgC-eL-Hgc" id="MuK-l5-r2P"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="To B2" id="xHD-XK-gw7">
+                            <connections>
+                                <action selector="toB2Page" destination="AgC-eL-Hgc" id="oyG-4r-OXg"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="toB1Button" destination="XXT-ZY-CNj" id="XVH-JG-EeA"/>
+                        <outlet property="toB2Button" destination="xHD-XK-gw7" id="hdW-Xh-VWu"/>
+                        <segue destination="eu1-MA-YTc" kind="relationship" relationship="nextPage" id="X87-e7-2M1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="225" y="60"/>
+        </scene>
+        <!--InterfaceControllerC-->
+        <scene sceneID="DSc-FI-NS4">
+            <objects>
+                <controller identifier="InterfaceControllerC" id="eu1-MA-YTc" customClass="InterfaceControllerC" customModule="DemoWatch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="C" id="Iyl-4x-qJU">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="523" y="60"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="DemoWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="DemoWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>
