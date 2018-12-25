@@ -16,9 +16,22 @@ def network_pods
     pod 'Alamofire', '~> 4.8.0'
 end
 
+def test_pods
+    pod 'Quick', '~> 1.3.2'
+    pod 'Nimble', '~> 7.3.0'
+end
+
 target 'Demo' do
     platform :ios, '9.0'
 
+    pod 'Result', '~> 4.0.0'
     ui_pods
     rx_pods
 end
+
+target 'DemoTests' do
+    platform :ios, '9.0'
+
+    test_pods
+end
+

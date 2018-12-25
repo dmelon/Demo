@@ -17,11 +17,13 @@ class InterfaceControllerA: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        crownSequencer.delegate = self
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        crownSequencer.focus()
     }
     
     override func didDeactivate() {
@@ -64,5 +66,15 @@ extension InterfaceControllerA {
         case presentB2
         // 从 page-based 的 controllers 上 push 新的 controller
         case pushB1
+    }
+}
+
+extension InterfaceControllerA: WKCrownDelegate {
+    func crownDidBecomeIdle(_ crownSequencer: WKCrownSequencer?) {
+        print("crown did become idle")
+    }
+    
+    func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
+        print("crown did rotate")
     }
 }

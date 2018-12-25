@@ -23,35 +23,59 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
-        /*
+        
         // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
         for task in backgroundTasks {
             // Use a switch statement to check the task type
             switch task {
             case let backgroundTask as WKApplicationRefreshBackgroundTask:
                 // Be sure to complete the background task once you’re done.
-                backgroundTask.setTaskCompletedWithSnapshot(false)
+                if #available(watchOSApplicationExtension 4.0, *) {
+                    backgroundTask.setTaskCompletedWithSnapshot(false)
+                } else {
+                    backgroundTask.setTaskCompleted()
+                }
             case let snapshotTask as WKSnapshotRefreshBackgroundTask:
                 // Snapshot tasks have a unique completion call, make sure to set your expiration date
                 snapshotTask.setTaskCompleted(restoredDefaultState: true, estimatedSnapshotExpiration: Date.distantFuture, userInfo: nil)
             case let connectivityTask as WKWatchConnectivityRefreshBackgroundTask:
                 // Be sure to complete the connectivity task once you’re done.
-                connectivityTask.setTaskCompletedWithSnapshot(false)
+                if #available(watchOSApplicationExtension 4.0, *) {
+                    connectivityTask.setTaskCompletedWithSnapshot(false)
+                } else {
+                    connectivityTask.setTaskCompleted()
+                }
             case let urlSessionTask as WKURLSessionRefreshBackgroundTask:
                 // Be sure to complete the URL session task once you’re done.
-                urlSessionTask.setTaskCompletedWithSnapshot(false)
-            case let relevantShortcutTask as WKRelevantShortcutRefreshBackgroundTask:
-                // Be sure to complete the relevant-shortcut task once you're done.
-                relevantShortcutTask.setTaskCompletedWithSnapshot(false)
-            case let intentDidRunTask as WKIntentDidRunRefreshBackgroundTask:
-                // Be sure to complete the intent-did-run task once you're done.
-                intentDidRunTask.setTaskCompletedWithSnapshot(false)
+                if #available(watchOSApplicationExtension 4.0, *) {
+                    urlSessionTask.setTaskCompletedWithSnapshot(false)
+                } else {
+                    urlSessionTask.setTaskCompleted()
+                }
+//            case let relevantShortcutTask as WKRelevantShortcutRefreshBackgroundTask:
+//                // Be sure to complete the relevant-shortcut task once you're done.
+//                if #available(watchOSApplicationExtension 4.0, *) {
+//                    relevantShortcutTask.setTaskCompletedWithSnapshot(false)
+//                } else {
+//                    relevantShortcutTask.setTaskCompleted()
+//                }
+//            case let intentDidRunTask as WKIntentDidRunRefreshBackgroundTask:
+//                // Be sure to complete the intent-did-run task once you're done.
+//                if #available(watchOSApplicationExtension 4.0, *) {
+//                    intentDidRunTask.setTaskCompletedWithSnapshot(false)
+//                } else {
+//                    intentDidRunTask.setTaskCompleted()
+//                }
             default:
                 // make sure to complete unhandled task types
-                task.setTaskCompletedWithSnapshot(false)
+                if #available(watchOSApplicationExtension 4.0, *) {
+                    task.setTaskCompletedWithSnapshot(false)
+                } else {
+                    task.setTaskCompleted()
+                }
             }
         }
- */
+ 
     }
 
 }

@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = window
         
+        print(true == Optional<Bool>.none)
+        print(false == Optional<Bool>.none)
+        print(Optional.some(true) == true)
+        
         return true
     }
 

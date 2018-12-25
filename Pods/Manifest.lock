@@ -1,4 +1,7 @@
 PODS:
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
+  - Result (4.0.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -7,23 +10,32 @@ PODS:
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
+  - Nimble (~> 7.3.0)
+  - Quick (~> 1.3.2)
+  - Result (~> 4.0.0)
   - RxCocoa (~> 4.4.0)
   - RxSwift (~> 4.4.0)
   - SnapKit (~> 4.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - Result
     - RxAtomic
     - RxCocoa
     - RxSwift
     - SnapKit
 
 SPEC CHECKSUMS:
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: e43afaa15f22598346bc6d005e0dd7226554ad9a
+PODFILE CHECKSUM: dacd55eb475d9f40f431ff14df908be5e8425e5c
 
 COCOAPODS: 1.5.3
