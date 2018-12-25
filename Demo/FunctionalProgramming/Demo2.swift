@@ -80,4 +80,30 @@ class Demo2: NSObject {
         f3(()) // 输出 function 3
         f31(()) // 输出 function 3
     }
+    
+    // TODO: 
+    // https://github.com/apple/swift-evolution/blob/master/proposals/0022-objc-selectors.md
+    // https://stackoverflow.com/questions/42048535/why-does-it-need-to-force-unwrap-the-selector-to-avoid-swift-ambiguous-reference
+    static func run2() {
+        typealias DownloadType = (URLSessionDataDelegate) -> (URLSession, URLSessionDataTask, URLSessionDownloadTask) -> Void
+        typealias StreamType = (URLSessionDataDelegate) -> (URLSession, URLSessionDataTask, URLSessionDownloadTask) -> Void
+        
+        var sel = #selector(URLSessionDataDelegate.urlSession(_:dataTask:didBecome:)! as DownloadType)
+        sel = #selector(URLSessionDataDelegate.urlSession(_:dataTask:didBecome:)! as StreamType)
+        
+        /// ?? 下面两个方法为什么不行
+        // sel = #selector(Demo2.urlSession(_:dataTask:didBecome:)! as DownloadType)
+        // sel = #selector(Demo2.urlSession(_:dataTask:didBecome:)! as StreamType)
+    }
+}
+
+
+extension Demo2: URLSessionDataDelegate {
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didBecome downloadTask: URLSessionDownloadTask) {
+        
+    }
+    
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didBecome streamTask: URLSessionStreamTask) {
+        
+    }
 }
