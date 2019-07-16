@@ -24,6 +24,7 @@
 		2B454BFD21B8E8CE009CD302 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFC21B8E8CE009CD302 /* Log.swift */; };
 		2B454C0021B8F768009CD302 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFF21B8F768009CD302 /* Sequence.swift */; };
 		2B454C0221B8F76F009CD302 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454C0121B8F76F009CD302 /* String.swift */; };
+		2B8EF6AA22DE07DB00DE01CF /* DependencyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF6A922DE07DB00DE01CF /* DependencyGraph.swift */; };
 		CC3C2FF2037A73BF38BA3BF3 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58545DD6CA5D8E26B5CF25BF /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		2B454BFC21B8E8CE009CD302 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		2B454BFF21B8F768009CD302 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		2B454C0121B8F76F009CD302 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2B8EF6A922DE07DB00DE01CF /* DependencyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraph.swift; sourceTree = "<group>"; };
 		58545DD6CA5D8E26B5CF25BF /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9702D1F660D03EFB8111FAFC /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				2B454BED21B8D42D009CD302 /* ViewController.swift */,
 				2B454BE421B8D104009CD302 /* NavigationController.swift */,
 				2B454BEB21B8D277009CD302 /* OptionsController.swift */,
+				2B8EF6A922DE07DB00DE01CF /* DependencyGraph.swift */,
 				2B454BFC21B8E8CE009CD302 /* Log.swift */,
 				2B454BE621B8D139009CD302 /* Layout */,
 				2B454BF521B8DD78009CD302 /* Settings */,
@@ -267,6 +270,10 @@
 		2B454BAB21B8CDC1009CD302 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Install,
+					Launch,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				TargetAttributes = {
@@ -388,6 +395,7 @@
 				2B454BB921B8CDC1009CD302 /* RootController.swift in Sources */,
 				2B454BE521B8D104009CD302 /* NavigationController.swift in Sources */,
 				2B454BEC21B8D277009CD302 /* OptionsController.swift in Sources */,
+				2B8EF6AA22DE07DB00DE01CF /* DependencyGraph.swift in Sources */,
 				2B454BF421B8DC1B009CD302 /* LayoutGuideController.swift in Sources */,
 				2B454BF721B8DDB0009CD302 /* SettingsOptionsController.swift in Sources */,
 				2B454BF921B8DEF8009CD302 /* SettingsStore.swift in Sources */,
@@ -559,6 +567,7 @@
 			baseConfigurationReference = 154C3D98320D0F7D83C8A4E9 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSET_PACK_MANIFEST_URL_PREFIX = "\"\"";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NN2ZG6J8BK;
 				INFOPLIST_FILE = Demo/Info.plist;
@@ -567,6 +576,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = Install;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = Launch;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmelon.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -579,6 +590,7 @@
 			baseConfigurationReference = 9702D1F660D03EFB8111FAFC /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSET_PACK_MANIFEST_URL_PREFIX = "\"\"";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NN2ZG6J8BK;
 				INFOPLIST_FILE = Demo/Info.plist;
@@ -587,6 +599,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = Install;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = Launch;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmelon.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

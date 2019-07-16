@@ -31,10 +31,29 @@ class RootController: UITabBarController {
             })
             .disposed(by: bag)
     }
-    
+
     // layout tab
     private let layout: NavigationController = {
         let nv = NavigationController()
+        
+        var request = NSBundleResourceRequest(tags: ["Install"])
+        request.conditionallyBeginAccessingResources(completionHandler: { (downloaded) in
+            print("install is downloaded \(downloaded)")
+            request.beginAccessingResources(completionHandler: { (error) in
+                //
+                print("install fetch error \(error)")
+            })
+        })
+        
+//        request = NSBundleResourceRequest(tags: ["Launch"])
+//        request.conditionallyBeginAccessingResources(completionHandler: { (downloaded) in
+//            print("launch is downloaded \(downloaded)")
+//            request.beginAccessingResources(completionHandler: { (error) in
+//                //
+//                print("launch fetch error \(error)")
+//            })
+//        })
+        
         nv.tabBarItem = UITabBarItem(title: "Layout", image: UIImage(named: "layout"), tag: 0)
         
         let vc = LayoutOptionsController()
