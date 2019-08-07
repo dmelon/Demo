@@ -29,7 +29,7 @@ class RootController: UITabBarController {
                 guard let `self` = welf else { return }
                 self.tabBar.isTranslucent = value
             })
-            .disposed(by: bag)
+            .disposed(by: bag)        
     }
 
     // layout tab

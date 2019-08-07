@@ -5,6 +5,12 @@
       location = "group:Demo.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DependencyGraph/DependencyGraph.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Encoding/Encoding.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
