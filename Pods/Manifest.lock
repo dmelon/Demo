@@ -12,11 +12,12 @@ DEPENDENCIES:
   - SnapKit (~> 4.2.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - RxAtomic
     - RxCocoa
-    - RxSwift
     - SnapKit
+  trunk:
+    - RxSwift
 
 SPEC CHECKSUMS:
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
@@ -26,4 +27,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e43afaa15f22598346bc6d005e0dd7226554ad9a
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1
